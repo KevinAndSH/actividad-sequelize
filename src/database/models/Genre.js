@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes) => {
       allowNull: false,
     },
 
-    rating: {
+    ranking: {
       type: dataTypes.DECIMAL(3, 1),
       allowNull: false,
     },
@@ -31,7 +31,8 @@ module.exports = (sequelize, dataTypes) => {
       default: 1,
     },
   }, {
-    tableName: "genres"
+    tableName: "genres",
+    timestamps: false,
   })
 
   return Genre

@@ -45,7 +45,8 @@ module.exports = (sequelize, dataTypes) => {
     },
   },
   {
-    tableName: "movies"
+    tableName: "movies",
+    timestamps: false,
   })
 
   return Movie
