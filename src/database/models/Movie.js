@@ -7,14 +7,6 @@ module.exports = (sequelize, dataTypes) => {
       allowNull: false,
     },
 
-    created_at: {
-      type: dataTypes.DATE,
-    },
-
-    updated_at: {
-      type: dataTypes.DATE,
-    },
-
     title: {
       type: dataTypes.STRING(500),
       allowNull: false,
@@ -46,7 +38,8 @@ module.exports = (sequelize, dataTypes) => {
   },
   {
     tableName: "movies",
-    timestamps: false,
+    createdAt: "created_at",
+    updatedAt: "updated_at",
   })
 
   return Movie
